@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quinta Aplicacion</title>
+ 
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temasapp5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+ 
+<body onLoad="MM_preloadImages('imagenes/diadelatierra2.jpg','imagenes/fechatierra.jpg','imagenes/fechatierra2.jpg','imagenes/celebratierra2.jpg','imagenes/queestierra2.jpg','imagenes/cuidadoshambi2.jpg','imagenes/calentamientoglob.jpg','imagenes/beneficioshambi.jpg','imagenes/solucionarproblemas.jpg')">
+<div data-role="page" id="Principal" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+     <h1>DIA DE LA TIERRA </h1>
+  </div>
+   <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image17','','imagenes/diadelatierra2.jpg',1)"><img src="imagenes/diadelatierra.jpg" width="600" height="646" id="Image17"></a>
+ 
+  </div>
+<div>
+    <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+    <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+    <h2>¿Qué es el dia de la Tierra?</h2>
+    <p>Mostrar</p>
+      </a>
+     </li>
+     <li class="ui-first-child ui-last-child">
+       <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+       <h2>Fecha...¿Por que?</h2>
+       <p>Mostrar</p>
+       </a>
+     </li>
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Celebracion</h2>
+      <p>Mostrar</p>
+      </a>
+    </li>
+   <li class="ui-first-child ui-last-child">
+   <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Cuidados del medio hambiente</h2>
+      <p>Mostrar</p>
+      </a>
+   </li>
+   <li class="ui-first-child ui-last-child">
+      <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Calentamiento global y cambio climatico</h2>
+      <p>Mostrar</p>
+      </a>
+      </li>
+      <li class="ui-first-child ui-last-child">
+      <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Beneficios de cuidar el ambiente</h2>
+      <p>Mostrar</p>
+      </a>
+      </li>
+      <li class="ui-first-child ui-last-child">
+      <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Tipos de contaminacion</h2>
+      <p>Mostrar</p>
+      </a>
+      </li>
+      <li class="ui-first-child ui-last-child">
+      <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2>Problemas de mi comunidad</h2>
+      <p>Mostrar</p>
+      </a>
+      </li>
+   </ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+   <div>
+      <img src="res/android/mdpi.png" width="46" height="46">
+   </div>
+   <div>
+     <h4>Aplicación Cinco</h4>
+     <h4>Terron De Gante Guadalupe Isabel</h4>
+     </div>
+     </div>
+     </div>
+   </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+     <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Medio Ambiente</h1>
+  </div>
+ <div data-role="content">
+  <div>
+    <p> Todo inicio cuando en primera instancia Gaylord Nelson, senador norteamericano tuvo una entusiasta defensa para que la agenda gubernamental tomara en cuenta temas de índole ecológica.
+En 1969 se dio una manifestación popular donde se evidenció la preocupación por el manejo del tema ambiental en una administración gubernamental.
+Todo tomo forma cuando, Gladwin Hill del periódico The New York Times escribió, “La conciencia sobre la crisis medioambiental está arrasando los campus universitarios con una intensidad solo comparable con el descontento con la Guerra de Vietnam…por ello las oficinas del senador Gaylord Nelson planifican un día nacional para conversar sobre los problemas medio ambientales…para la próxima primavera”.
+     <br>
+     <center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','imagenes/fechatierra.jpg',1)"><img src="imagenes/queestieer.jpg" width="674" height="675" id="Image16"></a> </center>
+     <br>
+     <br>
+   El Día de la Madre Tierra coincide con la firma del Acuerdo de París
+este año, el Día de la Madre Tierra coincidío con la ceremonia de firma del Acuerdo de París sobre el cambio climático, que tuvo lugar en la sede de las Naciones Unidas en Nueva York.
+El Acuerdo fue aprobado por los 196 Estados, partes de la Convención Marco sobre el Cambio Climático en París el 12 de diciembre de 2015.
+En el acuerdo, todos los países se comprometieron a trabajar para limitar el aumento de la temperatura global por debajo de los 2 grados centígrados, y dados los graves riesgos, a esforzarse por lograr que sea menos de 1,5 grados centígrados.
+La ceremonia se llevó a cabo en el primer día que el Acuerdo estuvo abierto para la firma, marcando el primer paso para asegurar que el Acuerdo entre en vigor jurídico tan pronto como sea posible.
+La Asamblea General, Reconociendo que Madre Tierra es una expresión común utilizada para referirse al planeta Tierra en diversos países y regiones, lo que demuestra la interdependencia existente entre los seres humanos, las demás especies vivas y el planeta que todos habitamos y Observando que cada año se celebra el Día de la Tierra en numerosos países, decidió designar el 22 de abril como Día Internacional de la Madre Tierra.
+  </div>
+ </div>
+  <div data-role="collapsible" data-content-theme="false">
+  <h1>Todo sobre la tierra</h1>
+ <iframe src="http://www.ine.gov.ve/index.php?option=com_content&view=article&id=110:22-de-abril-dia-mundial-de-la-tierra&Itemid=48 style= width:80%px;height:80%px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+  </div>
+<div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+</div>
+</div>
+ 
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+     <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+  <h1>Medio Ambiente</h1>
+  </div>
+ <div data-role="content">
+  <div>
+     <br>
+ <p>Desde 1970 cada 22 de abril se celebra el día internacional de la tierra; creado con el fin de generar participación y conciencia ambiental entre las personas, así como para apoyar los programas e iniciativas ambientales que se gestan año a año desde entonces.
+
+Según la EPA de los Estados Unidos (Agencia de Protección del Ambiente por sus siglas en inglés) uno de los logros más importantes de ese día fue la movilización masiva de personas del común que querían involucrarse y hacer sentir su preocupación por la problemática ambiental existente. El objetivo de toma de conciencia se había logrado.
+
+Un interrogante planteado desde esa década y para el cual en la actualidad no se ha encontrado respuesta contundente es el de ¿Cómo lograr que esa conciencia se convierta en acción?. Una respuesta viable fueron las políticas, convenciones, protocolos, tratados, entre otros acuerdos ambientales creados desde las altas esferas gubernamentales para dar solución a las problemáticas. Estos acuerdos no han tenido el éxito esperado debido a la falta de apoyo y compromiso en la ejecución por parte de los gobiernos y corporaciones.
+
+Durante el primer aniversario del día de la tierra William Ruckelshaus en su discurso llamado “De la conciencia a la acción” vislumbró la posible respuesta a la pregunta en cuestión, proponiendo que “la responsabilidad de cada uno de nosotros tiene que ir más allá de la sensibilización a la acción para que la humanidad vuelva a un equilibrio con la naturaleza”.
+
+Esto nos reafirma el compromiso que debemos adquirir personalmente con las acciones ambientales que se generan a nivel local con el fin de propender por su desarrollo continuo y así poder escalar, logrando un impacto a nivel regional e incluso global.
+
+A partir de nuestras acciones individuales como reciclar, ahorrar energía, disminuir el consumo de papel, ser compradores responsables, participar activamente en campañas ambientales, entre otras, podremos convertir nuestros sentimientos verdes o la moda verde en algo tangible, duplicable y permanente en el tiempo.
+
+Es la conexión con las demás personas y las iniciativas ambientales comunes las que nos permitirán continuar comprometidos con el desarrollo y fortalecimiento de las acciones encaminadas a proteger la canica azul en la cual vivimos.
+ <br>
+<br>
+ <br>
+<center> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','imagenes/fechatierra2.jpg',1)"><img src="imagenes/fechatieerra.jpg" width="287" height="176" id="Image14"></a> </center>
+  </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+</div>
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+ <div data-role="content" >
+ <div>
+  <br>
+ <center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','imagenes/celebratierra2.jpg',1)"><img src="imagenes/celebratierra.jpg" width="635" height="325" id="Image15"></a></center>
+<p>
+  DÍA DE LA TIERRA, ¿CÓMO CELEBRARLO?
+  El día de la Tierra es una de las expresiones más bonitas y ecológicas que tenemos. Para el 22 de abril de 2016, el día de la Tierra, te proponemos pasar un día celebrando precisamente nuestro amor por la tierra, y por ello se dan diversos actos que nos permiten celebrar este día de un modo especial, dejando claro nuestro compromiso con el medio ambiente, la tierra y el entorno que nos rodea.
+</div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+ <div data-role="content" >
+ <div>
+ <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','imagenes/queestierra2.jpg',1)"><img src="imagenes/cuidadoshambi.jpg" width="638" height="479" id="Image"></a>
+ <br>
+ Consejos para cuidar el medio ambiente.-
+1.- Antes de comprar un producto, hazte la pregunta si realmente lo necesitas. Cualquier consumo innecesario es en esencia antiecológico y antieconómico, ¿no lo crees?
+<br>
+2.- Sé crítico con la publicidad. Mira las cualidades de los productos, no los sueños que te venden en la publicidad muchas veces engañosa.
+<br>
+3.- Antes de tirar cualquier cosa a la basura, piensa si se puede reutilizar, reciclar o reparar, o si puede ser útil para otra persona.
+<br>
+4.- Evita las latas de bebidas, vale más el envase que su contenido y apenas se recuperan. La energía necesaria para producir y transportar una lata equivale a la mitad del bote lleno de petróleo.
+<br>
+5.- La energía que producen las pilas es más de 600 veces más cara que la de la red. Conecta los aparatos a la red siempre que esto sea posible. Si te es imprescindible usar pilas (nunca tires las usadas a la basura), procura que sean recargables.
+<br>
+6.- Desconecta los aparatos eléctricos de la red cuando no están funcionando. Algunos aparatos (como televisores) siguen gastando hasta un 33% de la energía.
+<br>
+7.- Prescinde de los electrodomésticos innecesarios como cepillos de dientes, abrelatas, cuchillos eléctricos, etc. Son mas cómodos algunos pero ninguno se iguala al sentimiento de hacerlo manualmente y saber que ahorraste miles de kilogramos de gases contaminantes que pudieron haberse liberado en alguna fábrica …China, seguro. Ten encuenta los criterios de ahorro energético al comprar nuevos frigoríficos, lavadoras, etc.
+<br>
+8.- Usa bombillas LED que duran mucho más que las bombillas  tradicionales y que inclusiva las fluorescentes. Son de bajo consumo de energía para dar la misma cantidad de luz, con lo cual se termina ahorrando dinero y colaborando con el medio ambiente.
+<br>
+9.- Evita los aerosoles que contienen CFCs y que son causantes de la destrucción de la capa de ozono, u otros gases que también contribuyen al efecto invernadero. Los pulverizadores son una buena alternativa y son recargables.
+<br>
+10.-La gran mayoría de los productos de limpieza que se anuncian no sólo son innecesarios sino también muy nocivos para el medio ambiente. Casi toda la casa puede quedar perfectamente limpia con jabón, bicarbonato, vinagre y limón.
+<br>
+ <br>
+ <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','imagenes/cuidadoshambi2.jpg',1)"><img src="imagenes/queestierra2.jpg" width="1200" height="576" id="Image2"></a><br>
+ 11.- Los ambientadores no eliminan los malos olores sino que desprenden otros más fuertes que nos impiden detectar los primeros. Que éstos sean legítimamente ecológicos, biodegradables y libres de químicos agresivos.
+ <br>
+12.- Evita usar productos agresivos: limpiahornos, lejía, etc., que impiden los procesos biológicos de depuración del agua. Nunca tires productos tóxicos, pintura o aceite de cocinar al desagüe. Llama a la empresa de agua y alcantarillado y pregunta. Esa es la salida moralmente correcta y tendrás a tu consciencia feliz. Lo otro, tirar donde te apetece para ser un “borrego” mas de los que sobran.
+<br>
+13.- Para ahorrar agua, instala un sistema de doble descarga en el inodoro, ya que vaciar la cisterna entera supone gastar de 10 a litros. Repara los grifos que gotean. Una gota por segundo son 30 litros al día. Hay que poner el hombro al cuidado del medio ambiente.
+<br>
+14.- Tapa siempre las cazuelas para no despilfarrar calor. La olla exprés es la mejor opción:ahorra tiempo y energía. Si no, son preferibles las cazuelas de hierro, acero inoxidable o barro antes que las de aluminio.
+<br>15.- En la alimentación, evita la comida basura o precocinada, ya que suele contener muchos aditivos y conservantes y viene sobreempaquetada. Procura consumir alimentos frescos, de temporada y de producción local.
+16.- Rechaza los alimentos envasados en bandejas de poliestireno expandido (corcho blanco). Los productos no son mejores porque vengan envueltos en plástico.
+<br>
+17.- Guarda los alimentos en la clásica fiambrera o tarros de cristal en lugar de envolverlos o taparlos con película de plástico o aluminio.
+<br>
+18.- Evita los productos que recorren grandes distancias antes de llegar al consumidor. Da preferencia a las alternativas locales. No tiene sentido consumir miel chilena, cerveza mejicana o galletas danesas. Solo incrementas la huella ecológica que dejas en el planeta.
+<br>
+19.- Aprovecha bien el papel: úsalo por las dos caras, utilízalo reciclado y envíalo después a reciclar. Rechaza el papel blanqueado con cloro.
+<br>
+20.- Apúntate a la Lista Robinson para dejar de recibir publicidad personalizada por correo. Coloca un distintivo en tu buzón indicando que no quieres propaganda.
+<br>
+ </div>
+ </div>
+ <div data-role="collapsible" data-content-theme="false">
+  <h1>3 'R'</h1>
+  REGLA DE LAS TRES 'R'
+  <BR>
+  <BR>
+  <BR>
+    <img src="imagenes/tresrrr.jpg" alt="tamaño original">
+    <BR>
+    REDUCE
+    <BR>
+    RECICLA
+    <BR>
+    REUSA
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+ <div data-role="content">
+ <div>
+ <br>
+ <center><img src="imagenes/calentamiento.jpg" alt="tamaño original" align="left"></center>
+<p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ ¿Qué es el Cambio Climático?
+La evidencia científica del cambio climático es indiscutible, esto según lo planteado por el IPCC (Intergovernmental Panel on Climate Change) organización internacional líder sobre el tema del cambio climático. O como lo plantea la EPA (Agencia de Protección del Ambiente de EE.UU.), “El cambio climático está sucediendo” y que “la evidencia es clara”.
+  <br>
+  <br>
+ El cambio climático es definido como un cambio estable y durable en la distribución de los patrones de clima en periodos de tiempo que van desde décadas hasta millones de años. Pudiera ser un cambio en las condiciones climáticas promedio o la distribución de eventos en torno a ese promedio (por ejemplo más o menos eventos climáticos extremos). El cambio climático puede estar limitado a una región específica, como puede abarcar toda la superficie terrestre.
+  <br>
+  <br>
+El término, a veces se refiere específicamente al cambio climático causado por la actividad humana, a diferencia de aquellos causados por procesos naturales de la Tierra y el Sistema Solar. En este sentido, especialmente en el contexto de la política ambiental, el término “cambio climático” ha llegado a ser sinónimo de “calentamiento global antropogénico“, o sea un aumento de las temperaturas por acción de los humanos.
+  <br>
+  <br>
+ Los cambios climáticos están relacionados con la creciente concentración de determinados gases de Efecto Invernadero derivados de la actividad humana.
+  <br>
+ Aunque existen imprecisiones sobre su magnitud e impacto, se ha generado un consenso internacional sobre su tendencia a desestabilizar el equilibrio ecológico del planeta y afectar el desarrollo económico y social de todos los países del mundo. 
+</div>
+ </div>
+ <div data-role="collapsible" data-content-theme="false">
+  <h1>CALENTAMIENTO GLOBAL</h1>
+     <div>
+    <h2>¿Qué es el Calentamiento Global?l</h2>      <br>
+     <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','imagenes/calentamientoglob.jpg',1)"><img src="imagenes/calentamientoglob2.jpg" width="600" height="400" id="Image13"></a><br>
+      <p>¿Qué es el Calentamiento Global?
+El término Calentamiento Global se refiere al aumento gradual de las temperaturas de la atmósfera y océanos de la Tierra que se ha detectado en la actualidad, además de su continuo aumento que se proyecta a futuro.
+     <br>
+     <br>
+     Nadie pone en duda el aumento de la temperatura global, lo que todavía genera controversia es la fuente y razón de este aumento de la temperatura. Aún así, la mayor parte de la comunidad científica asegura que hay más que un 90% de certeza que el aumento se debe al aumento de las concentraciones de gases de efecto invernadero por las actividades humanas que incluyen deforestación y la quema de combustibles fósiles como el petróleo y el carbón. Estas conclusiones son avaladas por las academias de ciencia de la mayoría de los países industrializados.
+<br>
+  </div>
+  </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+ <div data-role="content" >
+ <div>
+ <p><center><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','imagenes/beneficioshambi.jpg',1)"><img src="imagenes/beneficioshambi2.jpg" width="500" height="466" id="Image12"></a> </center>
+ <br>
+   Beneficios de cuidar el medio ambiente:
+Hay muchos beneficios en cuidar el medio ambiente, como por ejemplo ahorrar energía o dejar de contaminar. A continuación les dejare una lista de estos beneficios: <br>
+•	Ahorrar energía.
+<br>
+•	Reducir la contaminación del aire.
+<br>
+•	Reducir la contaminación del ambiente.
+<br>
+•	Ayudar a vivir en un ambiente más limpio y sano.
+<br>
+•	Reducir el crecimiento del agujero de la capa de ozono.
+<br>
+•	Dejar de extinguir animales.
+<br>
+•	Ampliar el hábitat de animales.
+<br>
+•	El medio Ambiente es el conjunto de todas las cosas vivas que nos rodean, de él obtenemos la materia prima que utilizamos para vivir.
+<br>
+•	Es por esto que cuando atropellamos o hacemos mal uso de los recursos naturales, que tenemos a disposición, lo ponemos en peligro. El aire y el agua ambos indispensables para vivir se están contaminando, por tanto debemos hacer conciencia del uso que les damos.
+<br>
+•	Defender el medio ambiente es parte de nuestro deber, ya que nos convierte en agente dinámico y así fomentamos la cooperación que nos garantizará un mejor futuro y un país más sano.
+<br>
+•	Como familia podemos asumir actitudes tanto individuales como colectivas en defensa del ambiente, buscando soluciones que impidan su contaminación y degradación.
+<br>
+•	El deterioro en que se encuentra el medio ambiente, exige que asumamos responsabilidades sobre la contaminación ambiental y los peligros que representan para el desarrollo de nuestra sociedad, con la finalidad de contribuir a contrarrestarlos.
+<br>
+ </div>
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+<div data-role="content" >
+ <div>
+ <p> 
+<img src="imagenes/contaminacion.jpg" alt="tamaño original" align="left">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   TIPOS DE CONTAMINACION
+Diferentes tipos de contaminación están clasificados por su parte que afectan o resultan por las causas de contaminación particulares. Cada uno de estos tipos tiene sus propias causas y consecuencias distintivas. El estudio de la contaminación ambiental ayuda a entender los conceptos básicos con mayor detalle y producir protocolos para los tipos específicos. En consecuencia, los principales tipos de contaminación son: <br>
+•	Contaminación del Agua
+<br>
+•	Contaminación del Aire
+<br>
+•	Contaminación del Suelo
+<br>
+•	Contaminación Térmica
+<br>
+•	La Contaminación radiactiva
+<br>
+•	Contaminación Acústica
+<br>
+•	Contaminación Lumínica
+ <br>
+ <center><img src="imagenes/contaminacion2.jpg" alt="tamaño original" align="left"></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Contaminación del Agua
+Como su nombre lo sugiere, “Contaminación del agua” es el tipo de contaminación que supone la contaminación distintos cuerpos de agua. Varias criaturas acuáticas dependen de estos cuerpos de agua y sus características naturales nutritivos para apoyar su vida.
+<br>
+ <br>
+Definición Contaminación Acustica
+El ruido es en realidad una palabra latina que le da el significado? Mareo?. Más comúnmente, se puede afirmar que la sensación de molestia, desagrado o molestia.
+No es muy fácil de definir la definición de la contaminación acústica. Esencialmente, la contaminación acústica es el tipo de contaminación que se produce por diferentes fuentes de audio que está causando la sensación de irritación, distracción para nuestro medio ambiente. 
+<br>
+<br>
+contaminación lumínica?
+La luz artificial se está convirtiendo en un peligro para nuestra planeta. Esta no sólo afecta a la belleza natural, sino a seres humanos, los animales, las aves y la vegetación. Por lo tanto, el ciclo de vida de los seres vivos también está siendo afectada por la contaminación lumínica.
+<br>
+<br>
+Contaminación Térmica
+La contaminación térmica se refiere a la adición de grandes cantidades de calor residual para el medio ambiente, las causas de la contaminación térmica son casi las mismas que las que causa la contaminación del aire.
+ </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+ <h1>Medio Ambiente</h1>
+ </div>
+ <div data-role="content" >
+ <div>
+ <!-- Start WOWSlider.com -->
+<iframe src="visor/iframe_indexwow.html" style="width:960px;height:360px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+
+ <p>
+ PROBLEMAS DE CONTAMINACION EN MI COMUNIDAD
+<br>
+<br>
+-En la esquina de mi casa dejan la basuera.
+<br>
+-Graffiti
+<br>
+-Vecino escandalozo.
+ </div>
+ </div>
+ <div data-role="collapsible" data-content-theme="false">
+  <h1>Visualizar</h1>
+  <img src="imagenes/solucionarproblemas.jpg" alt="tamaño original">
+  <br>
+  -Hablar con los vecinos pára hacer consiencia de el daño que hacemos al planeta.
+  <br>
+  -Poner a un vecino vigilante para que este al pendiente de que no pinten con aerosol.
+  <br>
+  -Hacer limpieza de la comunidad todos. 
+  </div>
+ <div data-role="footer" data-theme="a">
+ <h4>App 5 Terron De Gante Guadalupe Isabel</h4>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div> 
+ </div>
+</body>
+ </html>
